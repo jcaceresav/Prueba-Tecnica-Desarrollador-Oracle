@@ -1,11 +1,9 @@
 CREATE or REPLACE TRIGGER TRG_MAYUSCU
   AFTER INSERT OR UPDATE ON PERSONAS
-  REFERENCING OLD AS old_buffer NEW AS new_buffer 
   FOR EACH ROW  
 
 DECLARE
-      Operation       NUMBER;
-      CustomerCode    CHAR(10 BYTE);
+      dumbVar       NUMBER;
 BEGIN
 
 SELECT UPPER(nombres) || " " || UPPER(apellidos)
