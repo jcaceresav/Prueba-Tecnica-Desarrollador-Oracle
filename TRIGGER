@@ -8,15 +8,8 @@ DECLARE
       CustomerCode    CHAR(10 BYTE);
 BEGIN
 
-IF INSERTING THEN 
-  Operation := 1;
-  CustomerCode := :new_buffer.field1;
-END IF;
-
-IF UPDATING THEN 
-  Operation := 2;
-  CustomerCode := :new_buffer.field1;
-END IF;    
+SELECT UPPER(nombres) || " " || UPPER(apellidos)
+   FROM personas;
 
 // DO SOMETHING ...
 
