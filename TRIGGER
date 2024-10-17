@@ -1,5 +1,5 @@
 CREATE or REPLACE TRIGGER TRG_MAYUSCU
-  AFTER INSERT OR UPDATE OR DELETE ON PERSONAS
+  AFTER INSERT OR UPDATE ON PERSONAS
   REFERENCING OLD AS old_buffer NEW AS new_buffer 
   FOR EACH ROW  
 
@@ -7,11 +7,6 @@ DECLARE
       Operation       NUMBER;
       CustomerCode    CHAR(10 BYTE);
 BEGIN
-
-IF DELETING THEN 
-  Operation := 3;
-  CustomerCode := :old_buffer.field1;
-END IF;
 
 IF INSERTING THEN 
   Operation := 1;
