@@ -1,0 +1,31 @@
+CREATE or REPLACE TRIGGER TRG_MAYUSCU
+  AFTER INSERT OR UPDATE OR DELETE ON tabletest001
+  REFERENCING OLD AS old_buffer NEW AS new_buffer 
+  FOR EACH ROW WHEN (new_buffer.field1 = 'HBP00' OR old_buffer.field1 = 'HBP00') 
+
+DECLARE
+      Operation       NUMBER;
+      CustomerCode    CHAR(10 BYTE);
+BEGIN
+
+IF DELETING THEN 
+  Operation := 3;
+  CustomerCode := :old_buffer.field1;
+END IF;
+
+IF INSERTING THEN 
+  Operation := 1;
+  CustomerCode := :new_buffer.field1;
+END IF;
+
+IF UPDATING THEN 
+  Operation := 2;
+  CustomerCode := :new_buffer.field1;
+END IF;    
+
+// DO SOMETHING ...
+
+EXCEPTION
+    WHEN OTHERS THEN ErrorCode := SQLCODE;
+
+END;
