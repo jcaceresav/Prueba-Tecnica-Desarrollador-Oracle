@@ -11,13 +11,13 @@ END;
 
 ============================================================================================================================
 
-CREATE TRIGGER TRG_AUPPER 
+CREATE OR REPLACE TRIGGER TRG_AUPPER 
   BEFORE UPDATE OR INSERT ON PERSONAS
   FOR EACH ROW
 BEGIN
 /* convertir caracteres a mayusculas con upper case */
   :NEW.APELLIDOS := upper( :NEW.APELLIDOS );
   :NEW.NOMBRES := upper( :new.firstname );
-  dbms_output.put_line('trigger ejecutado');
-end;
+  DBMS_OUTPUT.PUT_LINE('trigger ejecutado');
+END;
 /
