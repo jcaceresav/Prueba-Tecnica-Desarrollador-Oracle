@@ -1,0 +1,10 @@
+CREATE OR REPLACE PROCEDURE AddNewReview(
+  RESTAURANTNAME IN VARCHAR2 (100)
+, USERNAME IN VARCHAR2 (100)
+, Stars IN NUMBER 
+, RATINGDATE IN DATE 
+) AS 
+BEGIN
+  INSERT INTO newReview VALUES (RestaurantName, UserName, Stars, RatingDate);
+END AddNewReview;
+;
