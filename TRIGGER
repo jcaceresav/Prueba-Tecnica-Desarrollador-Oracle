@@ -12,12 +12,12 @@ END;
 ============================================================================================================================
 
 CREATE TRIGGER TRG_AUPPER 
-  before update or insert on employee
-  for each row
-egin
+  BEFORE UPDATE OR INSERT ON PERSONAS
+  FOR EACH ROW
+BEGIN
 /* convertir caracteres a mayusculas con upper case */
-  :new.lastname := upper( :new.lastname );
-  :new.firstname := upper( :new.firstname );
-  dbms_output.put_line('trigger fired');
+  :NEW.APELLIDOS := upper( :NEW.APELLIDOS );
+  :NEW.NOMBRES := upper( :new.firstname );
+  dbms_output.put_line('trigger ejecutado');
 end;
 /
