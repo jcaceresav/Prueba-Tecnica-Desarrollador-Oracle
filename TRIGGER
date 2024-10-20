@@ -17,7 +17,6 @@ CREATE OR REPLACE TRIGGER TRG_AUPPER
 BEGIN
 /* convertir caracteres a mayusculas con upper case */
   :NEW.APELLIDOS := upper( :NEW.APELLIDOS );
-  :NEW.NOMBRES := upper( :new.firstname );
+  :NEW.NOMBRES := upper( :NEW.NOMBRES );
   DBMS_OUTPUT.PUT_LINE('trigger ejecutado');
 END;
-/
