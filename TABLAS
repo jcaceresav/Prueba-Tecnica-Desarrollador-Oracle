@@ -10,6 +10,8 @@
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   TABLESPACE "USERS" ;
 
+alter table "DVPARTNERS" add id int;
+
 =======================================================================================================================
 
     SE ALTERA LA TABLA PARA CONVERTIR EL CAMPO ID COMO LA PK Y SE AGREGA UN TRIGGER 
