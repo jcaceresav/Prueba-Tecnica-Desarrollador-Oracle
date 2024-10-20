@@ -18,5 +18,15 @@ alter table PERSONAS add id int;
 
 CREATE SEQUENCE  "DVPARTNERS"."SEQ_ID_EMP"  MINVALUE 1 MAXVALUE 9999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE;
 
-
 =========================================================================================================================
+
+CREATE OR REPLACE TRIGGER trg_idemp 
+BEFORE INSERT ON PERSONAS
+FOR EACH ROW
+
+BEGIN
+  SELECT SEQ_ID_EMP.NEXTVAL
+  INTO   :new.id
+  FROM   dual;
+END;
+/
