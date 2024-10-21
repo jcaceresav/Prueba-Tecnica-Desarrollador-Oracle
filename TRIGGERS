@@ -20,3 +20,18 @@ BEGIN
   :NEW.NOMBRES := upper( :NEW.NOMBRES );
   DBMS_OUTPUT.PUT_LINE('trigger ejecutado');
 END;
+
+===============================================================================================================================
+
+CREATE TRIGGER myTrigger 
+BEFORE INSERT
+ON table
+REFERENCING NEW AS New
+FOR EACH ROW
+   BEGIN
+   IF (New.location = 'chicago') THEN
+       RAISE cError;    
+EXCEPTION
+WHEN cError THEN
+      RAISE_APPLICATION_EXCEPTION(-20001,'Chicago is not allowed');
+END;
