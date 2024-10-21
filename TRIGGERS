@@ -23,9 +23,9 @@ END;
 
 ===============================================================================================================================
 
-CREATE TRIGGER CHK_TIPOIDEN 
-BEFORE INSERT
-ON table
+CREATE OR REPLACE TRIGGER CHK_TIPOIDEN 
+BEFORE UPDATE
+ON PERSONAS
 REFERENCING NEW AS New
 FOR EACH ROW
    BEGIN
@@ -33,5 +33,5 @@ FOR EACH ROW
        RAISE cError;    
 EXCEPTION
 WHEN cError THEN
-      RAISE_APPLICATION_EXCEPTION(-20001,'Chicago is not allowed');
+      RAISE_APPLICATION_EXCEPTION(-20001,'UNICAMENTE CC TI NIT PAS SON PERMITIDOS');
 END;
