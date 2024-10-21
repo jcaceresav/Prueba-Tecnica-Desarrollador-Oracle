@@ -2,24 +2,13 @@
 This repository stores a variety of database objects -  Oracle Database.
 
 Repo/Folder name	Description
-C	C examples
-apex	APEX examples
-db-sample-schemas	Git submodule of the Oracle Database Sample Schemas
-dotnet	.NET based examples
-exadata	Exadata examples
-java	Java examples
-javascript	JavaScript examples
-machine-learning	Oracle Machine Learning examples
-optimizer	Oracle Optmizer and Optimizer Stats examples
-plsql	PL/SQL examples
-python	Python examples
-ruby	Ruby examples
-sagas	Saga examples
-security	Security features examples
-spatial	Spatial features examples
-sql	SQL examples
-sqldeveloper	SQL Developer examples
-txeventq	TxEventQ examples
+ESQUEMA
+README.md (THIS DOCUMENT)
+STORED_PROCEDURE
+TABLES
+TRIGGER
+
+
 Documentation
 You can find the online documentation of the Oracle Database under docs.oracle.com/en/database/
 
