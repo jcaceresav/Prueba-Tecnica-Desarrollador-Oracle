@@ -23,13 +23,13 @@ END;
 
 ===============================================================================================================================
 
-CREATE TRIGGER myTrigger 
+CREATE TRIGGER CHK_TIPOIDEN 
 BEFORE INSERT
 ON table
 REFERENCING NEW AS New
 FOR EACH ROW
    BEGIN
-   IF (New.location = 'chicago') THEN
+   IF (New.tipoidentificacion NOT IN ( 'CC', 'TI', 'NIT', 'PAS')) THEN
        RAISE cError;    
 EXCEPTION
 WHEN cError THEN
