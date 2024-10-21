@@ -1,4 +1,5 @@
-CREATE OR REPLACE PROCEDURE SP_AGREGA_PERSONA(
+create or replace 
+PROCEDURE SP_AGREGA_PERSONA(
 	   P_NOMBRES IN PERSONAS.NOMBRES%TYPE,
 	   P_APELLIDOS IN PERSONAS.APELLIDOS%TYPE,
 	   P_NUMEROIDENTIFICACION IN PERSONAS.NUMEROIDENTIFICACION%TYPE,
@@ -13,12 +14,13 @@ BEGIN
   VALUES (P_NOMBRES, P_APELLIDOS,P_NUMEROIDENTIFICACION, P_TIPOIDENTIFICACION,P_EMAIL,P_SALARIO,P_ESTADO);
 
   COMMIT;
+/* Se agrega manejo de mensajes de error  */  
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('ocurrio el error en el punto ''' ||
+                         strCheckpoint ||
+                         ''' SQLCODE=' || SQLCODE ||
+                         ' SQLERRM=' || SQLERRM);
+    RETURN;  
 
 END;
-
-------------------------------------------------------------------------------------------------------------------------
-
-EXEC dvpartners.SP_AGREGA_PERSONA('soYla','huRTarTe',31225312343,'DPI','soula442@gmail.com',500,'2');
-EXEC dvpartners.SP_AGREGA_PERSONA('allan','jonas',55337878900,'PAS','ajonas@intelnet.net.gt',15500,'1');
-
--------------------------------------------------------------------------------------------------------------------------
