@@ -64,3 +64,11 @@ BEGIN
     
   COMMIT;
 END;
+
+
+INICIAR LOS SERVICIOS WEB CON ESTAS URLS 
+
+http://localhost:8080/ords/hr/
+https://localhost:8443/ords/hr/
+
+.
