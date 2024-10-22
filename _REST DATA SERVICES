@@ -50,3 +50,17 @@ Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO) values
 (7876,'ADAMS','CLERK',7788,to_date('23-MAY-87','DD-MON-RR'),1100,null,20);
 Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO) values
 (7900,'JAMES','CLERK',7698,to_date('03-DEC-81','DD-MON-RR'),950,null,30);
+
+-- HABILITAR ORDS
+
+BEGIN
+  ORDS.enable_schema(
+    p_enabled             => TRUE,
+    p_schema              => 'TESTUSER1',
+    p_url_mapping_type    => 'BASE_PATH',
+    p_url_mapping_pattern => 'hr',
+    p_auto_rest_auth      => FALSE
+  );
+    
+  COMMIT;
+END;
