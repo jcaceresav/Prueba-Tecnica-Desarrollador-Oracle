@@ -8,12 +8,10 @@ GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE TO RESTFULL_TST;
 
            CONEXION CON NUEVO USUARIO
 ======================================================
-
 CONN RESTFULL_TST/usuarioprueba@//localhost:1521
 
-=====================================================
-
 --CREAR TABLA EMP
+======================================================
 CREATE TABLE EMP (
  EMPNO NUMBER(4,0),
  ENAME VARCHAR2(10 BYTE),
