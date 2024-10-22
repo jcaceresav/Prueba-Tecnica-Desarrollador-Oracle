@@ -1,4 +1,5 @@
 Prueba Técnica Desarrollador Oracle
+
 Estimado(a) candidato(a).
 Nos enorgullece saber que Double V Partners tiene el potencial de ser parte
 de tu proyecto de vida. Sabemos que las prueba técnicas son desgastantes y
