@@ -1,6 +1,5 @@
 CREATE OR REPLACE VIEW 
 VISTA_COLUMNAS_CALCULADAS
 AS
-SELECT TipoIdentificacion || ' '  || NumeroIdentificacion)
-IdentificacionCompleta
+SELECT CONCAT(TipoIdentificacion,NumeroIdentificacion) AS IdentificacionCompleta
 FROM PERSONAS;
