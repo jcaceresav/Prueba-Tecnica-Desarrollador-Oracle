@@ -1,26 +1,4 @@
-Prueba Técnica Desarrollador Oracle
 
-Estimado(a) candidato(a).
-Nos enorgullece saber que Double V Partners tiene el potencial de ser parte
-de tu proyecto de vida. Sabemos que las prueba técnicas son desgastantes y
-algo pesados, pero creemos que un buen proceso de selección es el que nos
-permite ver el potencial de una persona y también le permite al candidato(a)
-si este va a ser un trabajo retador, divertido, apasionante y acorde a tus
-expectativas. Date la oportunidad de hacer esto a conciencia no para pasar
-una prueba, sino para entender si este es el lugar adecuado para tu
-crecimiento profesional.
-
-Instrucciones
-Duración: Tienes un plazo de 2 días a partir de la recepción de esta prueba
-para completarla.
-Entrega: Debes subir tu solución a un repositorio GitHub y enviar el enlace
-al correo welcome@doublevpartners.com con el asunto “Prueba Técnica + [Tu
-Nombre]”.
-Formato de Entrega:
-● Incluye un archivo README.md con instrucciones detalladas para
-ejecutar y probar tu solución.
-● Asegúrate de que el repositorio esté organizado y que el código esté
-correctamente documentado.
 
 Adjunto los ejercicios de la prueba Técnica:
 1. Base de Datos Oracle y PL/SQL
